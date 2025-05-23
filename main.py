@@ -19,13 +19,22 @@ from PIL import Image
 from fetch_image import fetch_and_save_image
 from get_nearby_cameras import find_nearby_cameras
 from dotenv import load_dotenv
+import psutil
 
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 CORS(app)
 
+def log_memory(label=""):
+    proc = psutil.Process(os.getpid())
+    mem = proc.memory_info().rss / 1024 / 1024  # in MB
+    print(f"[{label}] Memory usage: {mem:.2f} MB")
+
 @app.post("/photo")
 def photo():
     
+
+    log_memory("start /photo")
+    start = time.time()
     data = request.get_json()
     lat, lng = data["lat"], data["lng"]
     
@@ -38,6 +47,12 @@ def photo():
     cameras = find_nearby_cameras(lat, lng, "camera_id_lat_lng_wiped.json")
     if not cameras:
         return jsonify(error="no cameras nearby"), 404
+
+    log_memory("after image fetch")
+
+    
+
+    
 
     stamp = int(time.time())
     output = []
@@ -63,6 +78,10 @@ def photo():
             })
         except Exception as e:
             print(f"❌ Failed for {addr}: {e}")
+
+    log_memory("before return")
+    print(f"Request took {time.time() - start:.2f} seconds")
+
 
     return jsonify(images=output)
 
