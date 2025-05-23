@@ -34,6 +34,7 @@ def photo():
     
 
     log_memory("start /photo")
+    print("hello")
     start = time.time()
     data = request.get_json()
     lat, lng = data["lat"], data["lng"]
