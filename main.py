@@ -59,7 +59,7 @@ def photo():
 
             output.append({
                 "address": addr,
-                "url": f"https://parkingspotterbackend.onrender.com:8000/static/imgs/{filename}"
+                "url": f"https://parkingspotterbackend.onrender.com/static/imgs/{filename}"
             })
         except Exception as e:
             print(f"❌ Failed for {addr}: {e}")
