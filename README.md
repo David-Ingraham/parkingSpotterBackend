@@ -21,14 +21,6 @@ backend/
 ├── requirements.txt           # Python dependencies
 ```
 
-## Setup & Run Locally
-
-```bash
-pip install -r requirements.txt
-python main.py
-```
-
-Your server will start at `http://localhost:8000`. Use a tool like `curl` or Postman to hit the `/photo` endpoint.
 
 ## API Reference
 
