@@ -150,12 +150,6 @@ This app is deployed to Render (free tier). On push to GitHub, it auto-rebuilds.
 
 Static files are served from `/static/imgs/`.
 
-## Known Limitations
-
-- Only supports NYC traffic cams via hardcoded metadata.
-- Images are not persisted — deleted on each request.
-- Render free tier suspends after 15 min idle.
-- Port `:8000` must not be exposed in URLs externally.
 
 ## License
 
@@ -164,4 +158,4 @@ This project is licensed under a custom license:
 You are free to use, modify, and distribute this code for personal or non-commercial use.  
 Commercial use, redistribution, or integration into paid products or services requires prior written permission and a commercial license from the author.
 
-Contact: David Ingraham — [your@email.com]
+Contact: David Ingraham — https://www.linkedin.com/in/david-ingraham-730066203
