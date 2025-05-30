@@ -2,3 +2,9 @@ inconsitent rendering issues were likely due to flask dev env
 limitations. once i started serving with waitress all the photos were rendering
 if its hosted on render it will have amore robust servering mechanism
 to handle things. 
+
+i wont be able to test the render endpoint 
+from the frontedn unless i get an emulator on my mac, 
+but that shit is def way too old. my work deksopt is good,
+
+but the firewall blocks render.com
