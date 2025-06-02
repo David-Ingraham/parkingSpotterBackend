@@ -1,4 +1,4 @@
-inconsitent rendering issues were likely due to flask dev env
+inconsitent rendering issues were likely due to flask dev server
 limitations. once i started serving with waitress all the photos were rendering
 if its hosted on render it will have amore robust servering mechanism
 to handle things. 
