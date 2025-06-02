@@ -8,3 +8,56 @@ from the frontedn unless i get an emulator on my mac,
 but that shit is def way too old. my work deksopt is good,
 
 but the firewall blocks render.com
+
+
+user can only submit a street to be watched once. if they try it again it shoudl say only one watch session per street.
+
+10 watch sessions per user?
+
+
+sample of json sent from frontend 
+
+
+{
+  "sessionId": "c845e113-33f2-4f7f-a39b-3df82a159c21",
+  "camera_id": "NYC_CAM_00123",
+  "address": "10th Ave & 42nd St",
+  "watchTime": "5 minutes"
+}
+
+
+sample json of watch dict. eseesntially the notification database stored in backend. each watch id is 
+generted by a function to 
+
+
+{
+  "c845e113-33f2-4f7f-a39b-3df82a159c21": {
+    "watch_001": {
+      "camera_id": "NYC_CAM_00123",
+      "address": "10th Ave & 42nd St",
+      "watchTime": "5 minutes",
+      "startTime": 1748640000,
+      "status": "no parking",
+      "notified": false
+    },
+    "watch_002": {
+      "camera_id": "NYC_CAM_00456",
+      "address": "7th Ave & 34th St",
+      "watchTime": "3 minutes",
+      "startTime": 1748640060,
+      "status": "parking available",
+      "notified": true
+    }
+  },
+
+  "a91c2df0-4ef8-4f0a-8bd7-e6d1f8f16a0e": {
+    "watch_001": {
+      "camera_id": "NYC_CAM_00222",
+      "address": "Broadway & W 72nd St",
+      "watchTime": "6 minutes",
+      "startTime": 1748640200,
+      "status": "no parking",
+      "notified": false
+    }
+  }
+}

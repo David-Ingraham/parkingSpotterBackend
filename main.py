@@ -3,7 +3,7 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 
 from waitress import serve
-from routes import register_routes  # you'll create this
+from routes import register_routes
 
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 CORS(app)

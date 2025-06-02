@@ -1,0 +1,54 @@
+{
+  "test-session-123": {
+    "watch_001": {
+      "camera_id": "NYC_CAM_00456",
+      "address": "7th Ave & 34th St",
+      "watchTime": "5 minutes",
+      "startTime": 1748898127,
+      "status": "unknown",
+      "notified": false
+    },
+    "watch_002": {
+      "camera_id": "NYC_CAM_00456",
+      "address": "7th Ave & 34th St",
+      "watchTime": "5 minutes",
+      "startTime": 1748898141,
+      "status": "unknown",
+      "notified": false
+    },
+    "watch_003": {
+      "camera_id": "NYC_CAM_00456",
+      "address": "7th Ave & 34th St",
+      "watchTime": "5 minutes",
+      "startTime": 1748898213,
+      "status": "unknown",
+      "notified": false
+    },
+    "watch_004": {
+      "camera_id": "NYC_CAM_00456",
+      "address": "7th Ave & 34th St",
+      "watchTime": "5 minutes",
+      "startTime": 1748898321,
+      "status": "unknown",
+      "notified": false
+    }
+  },
+  "test-session-1234": {
+    "watch_001": {
+      "camera_id": "NYC_CAM_00456",
+      "address": "7th Ave & 34th St",
+      "watchTime": "5 minutes",
+      "startTime": 1748898474,
+      "status": "unknown",
+      "notified": false
+    },
+    "watch_002": {
+      "camera_id": "NYC_CAM_00456",
+      "address": "7th Ave & 34th St",
+      "watchTime": "5 minutes",
+      "startTime": 1748898478,
+      "status": "unknown",
+      "notified": false
+    }
+  }
+}
