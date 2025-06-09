@@ -15,49 +15,45 @@ user can only submit a street to be watched once. if they try it again it shoudl
 10 watch sessions per user?
 
 
+why is the watch sessions file gettig wirttne to the root dir?
+
 sample of json sent from frontend 
 
 
 {
   "sessionId": "c845e113-33f2-4f7f-a39b-3df82a159c21",
-  "camera_id": "NYC_CAM_00123",
   "address": "10th Ave & 42nd St",
   "watchTime": "5 minutes"
 }
 
 
-sample json of watch dict. eseesntially the notification database stored in backend. each watch id is 
-generted by a function to 
+sample json of watch dict. eseesntially the notification database stored in backend. 
 
+the websocket identifies each user and gives us a destination for the notification. 
+if a connection is broken, it will be erased from the db (currently just local file)
+and the frontedn will reregister the watch sessions. 
 
-{
-  "c845e113-33f2-4f7f-a39b-3df82a159c21": {
-    "watch_001": {
-      "camera_id": "NYC_CAM_00123",
-      "address": "10th Ave & 42nd St",
-      "watchTime": "5 minutes",
-      "startTime": 1748640000,
-      "status": "no parking",
-      "notified": false
+  <websocket_obj_1>: [
+    {
+      "address": "10 Ave & W 34 St",
+      "watchTime": 5,
+      "lastNotifiedAt": 0,
+      "status": "no parking"
     },
-    "watch_002": {
-      "camera_id": "NYC_CAM_00456",
-      "address": "7th Ave & 34th St",
-      "watchTime": "3 minutes",
-      "startTime": 1748640060,
-      "status": "parking available",
-      "notified": true
+    {
+      "address": "Broadway & W 96 St",
+      "watchTime": 3,
+      "lastNotifiedAt": 0,
+      "status": "no parking"
     }
-  },
-
-  "a91c2df0-4ef8-4f0a-8bd7-e6d1f8f16a0e": {
-    "watch_001": {
-      "camera_id": "NYC_CAM_00222",
-      "address": "Broadway & W 72nd St",
-      "watchTime": "6 minutes",
-      "startTime": 1748640200,
-      "status": "no parking",
-      "notified": false
+  ],
+  <websocket_obj_2>: [
+    {
+      "address": "5 Ave & E 23 St",
+      "watchTime": 4,
+      "lastNotifiedAt": 0,
+      "status": "no parking"
     }
-  }
+  ]
 }
+
