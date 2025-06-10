@@ -1,5 +1,6 @@
 import os
 import time
+import uuid
 from flask import Blueprint, request, jsonify
 from PIL import Image
 from helpers.fetch_image import fetch_and_save_image
@@ -16,6 +17,23 @@ def log_memory(label=""):
     mem = proc.memory_info().rss / 1024 / 1024  # in MB
     print(f"[{label}] Memory usage: {mem:.2f} MB")
 
+def cleanup_old_dirs():
+    """Clean up directories older than 5 minutes"""
+    base_dir = os.path.join("static", "imgs")
+    now = time.time()
+    if os.path.exists(base_dir):
+        for dir_name in os.listdir(base_dir):
+            dir_path = os.path.join(base_dir, dir_name)
+            if os.path.isdir(dir_path):
+                # Check if directory is older than 5 minutes
+                if now - os.path.getctime(dir_path) > 300:  # 300 seconds = 5 minutes
+                    try:
+                        for f in os.listdir(dir_path):
+                            os.remove(os.path.join(dir_path, f))
+                        os.rmdir(dir_path)
+                    except Exception as e:
+                        print(f"Failed to cleanup directory {dir_path}: {e}")
+
 @bp.before_app_request
 def log_headers():
     print("BASE_URL is:", BASE_URL)
@@ -27,17 +45,18 @@ def log_headers():
 def fiveNearest():
     print(f"Above is for the {inspect.stack()[1][3]} endpoint")
     
-
     log_memory("start /fiveNearest")
     start = time.time()
     data = request.get_json()
     lat, lng = data["lat"], data["lng"]
     
-    # Delete old images
-    img_dir = os.path.join("static", "imgs")
+    # Create a unique directory for this request
+    request_id = str(uuid.uuid4())
+    img_dir = os.path.join("static", "imgs", request_id)
     os.makedirs(img_dir, exist_ok=True)
-    for f in os.listdir(img_dir):
-        os.remove(os.path.join(img_dir, f))
+    
+    # Clean up old request directories in the background
+    cleanup_old_dirs()
 
     cameras = find_nearby_cameras(lat, lng, "camera_id_lat_lng_wiped.json")
     if not cameras:
@@ -64,7 +83,7 @@ def fiveNearest():
 
             output.append({
                 "address": addr,
-                "url": f"{BASE_URL}/static/imgs/{filename}"
+                "url": f"{BASE_URL}/static/imgs/{request_id}/{filename}"
             })
         except Exception as e:
             print(f"❌ Failed for {addr}: {e}")
