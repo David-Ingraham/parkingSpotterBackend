@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from flask_socketio import emit
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import json
 from sqlalchemy.exc import IntegrityError
 from database.models import Camera, Watcher
@@ -54,7 +54,7 @@ def watch_camera():
     
     try:
         # Validate required fields
-        required_fields = ['address', 'client_id', 'notification_interval', 'expires_at']
+        required_fields = ['address', 'client_id', 'notification_interval']
         if not data or not all(field in data for field in required_fields):
             return jsonify({
                 "status": "error",
@@ -88,11 +88,8 @@ def watch_camera():
             )
             db.add(camera)
         
-        # Convert timestamp from milliseconds to datetime
-        expires_at = datetime.fromtimestamp(
-            data['expires_at'] / 1000,  # Convert from milliseconds
-            tz=timezone.utc
-        )
+        # Calculate expiration time based on notification interval
+        expires_at = datetime.now(timezone.utc) + timedelta(minutes=data['notification_interval'])
         
         # Get existing watcher or create new one
         watcher = db.query(Watcher).filter_by(
