@@ -6,51 +6,39 @@ import time
 
 
 def fetch_and_save_image(camera_id, timestamp):
-
+    """Fetch an image from the NYC traffic camera API"""
     try:
         api_url = f'https://webcams.nyctmc.org/api/cameras/{camera_id}/image?t={timestamp}'
-
+        print(f"[DEBUG] Fetching image from: {api_url}")
+        
         response = requests.get(api_url)
-        #rint(address)
-        numErrs = 0
+        print(f"[DEBUG] Response status: {response.status_code}, Content length: {len(response.content) if response.status_code == 200 else 0}")
         
         if response.status_code == 200:
-            img = Image.open(BytesIO(response.content))
-            #imgFilePath = f'traffic_camera_images/{(camera_id)}.png'
-            #img.save(imgFilePath)
-            #print(f"Image saved as {imgFilePath}")
+            try:
+                img = Image.open(BytesIO(response.content))
+                print(f"[DEBUG] Successfully opened image: {img.format}, Size: {img.size}")
+                return img
+            except Exception as e:
+                print(f"[ERROR] Failed to process image for camera {camera_id}: {e}")
+                return None
         else:
-            print(f"Error: Could not fetch image. Status Code: {response.status_code}")
-            numErrs +=1
+            print(f"[ERROR] Failed to fetch image for camera {camera_id}. Status Code: {response.status_code}")
+            if response.status_code != 404:  # Don't print potentially large error responses
+                print(f"[DEBUG] Error response: {response.text[:200]}...")
+            return None
 
-       
-
-    except:
-        print("one got messed up by we are intrepid")
-
-    return img
+    except Exception as e:
+        print(f"[ERROR] Request failed for camera {camera_id}: {e}")
+        return None
 
 def load_camera_data(filepath):
     try:
         with open(filepath, 'r') as f:
             return json.load(f)
     except FileNotFoundError:
-        print("Error: camera_addresses_to_id.json file not found. Please run the scraping script first.")
+        print("[ERROR] camera_addresses_to_id.json file not found. Please run the scraping script first.")
         return None
     except json.JSONDecodeError:
-        print("Error: JSON file is malformed.")
+        print("[ERROR] JSON file is malformed.")
         return None
-
-
-
-def main():
-    id = "23994d9e-7e59-4808-8d47-405f779d19cf"
-    timestamp =int(time.time())
-
-
-    fetch_and_save_image(id, timestamp)
-
-
-
-if __name__ == "__main__":
-    main()

@@ -86,7 +86,7 @@ def fiveNearest():
                 "url": f"{BASE_URL}/static/imgs/{request_id}/{filename}"
             })
         except Exception as e:
-            print(f"❌ Failed for {addr}: {e}")
+            print(f"[ERROR] Failed for {addr}: {e}")
 
     log_memory("before return")
     print(f"Request took {time.time() - start:.2f} seconds")
