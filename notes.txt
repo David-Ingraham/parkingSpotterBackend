@@ -18,3 +18,10 @@ user can only submit a street to be watched once. if they try it again it shoudl
 some of the cams in the json have null values for the lat and lng. fix that 
 
 
+fixed ^^^^
+
+
+
+detect gridlock by stagnant cars (detection model sees same car not move for time), update gridlock watcher page
+
+in the direct search, i want to show the camera they select and also the five nearest, toggleable
