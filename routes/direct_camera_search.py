@@ -1,29 +1,20 @@
 import os
+from dotenv import load_dotenv
 import time
 import json
 import uuid
 from flask import Blueprint, request, jsonify
 from PIL import Image
 from helpers.fetch_image import fetch_and_save_image
+from routes.five_nearest import cleanup_old_dirs
+
+# Load environment variables from .env file
+load_dotenv()
 
 bp = Blueprint('direct_camera_search', __name__)
-BASE_URL = os.getenv("BACKEND_URL")
+BASE_URL = os.getenv("BACKEND_URL", "http://localhost:8000")  # Default to localhost if not set
 
-def cleanup_old_dirs():
-    """Clean up directories older than 5 minutes"""
-    base_dir = os.path.join("static", "imgs")
-    now = time.time()
-    if os.path.exists(base_dir):
-        for dir_name in os.listdir(base_dir):
-            dir_path = os.path.join(base_dir, dir_name)
-            if os.path.isdir(dir_path):
-                if now - os.path.getctime(dir_path) > 300:  # 300 seconds = 5 minutes
-                    try:
-                        for f in os.listdir(dir_path):
-                            os.remove(os.path.join(dir_path, f))
-                        os.rmdir(dir_path)
-                    except Exception as e:
-                        print(f"[ERROR] Failed to cleanup directory {dir_path}: {e}")
+
 
 @bp.post("/search_cameras")
 def search_cameras():

@@ -15,45 +15,6 @@ user can only submit a street to be watched once. if they try it again it shoudl
 10 watch sessions per user?
 
 
-why is the watch sessions file gettig wirttne to the root dir?
+some of the cams in the json have null values for the lat and lng. fix that 
 
-sample of json sent from frontend 
-
-
-{
-  "sessionId": "c845e113-33f2-4f7f-a39b-3df82a159c21",
-  "address": "10th Ave & 42nd St",
-  "watchTime": "5 minutes"
-}
-
-
-sample json of watch dict. eseesntially the notification database stored in backend. 
-
-the websocket identifies each user and gives us a destination for the notification. 
-if a connection is broken, it will be erased from the db (currently just local file)
-and the frontedn will reregister the watch sessions. 
-
-  <websocket_obj_1>: [
-    {
-      "address": "10 Ave & W 34 St",
-      "watchTime": 5,
-      "lastNotifiedAt": 0,
-      "status": "no parking"
-    },
-    {
-      "address": "Broadway & W 96 St",
-      "watchTime": 3,
-      "lastNotifiedAt": 0,
-      "status": "no parking"
-    }
-  ],
-  <websocket_obj_2>: [
-    {
-      "address": "5 Ave & E 23 St",
-      "watchTime": 4,
-      "lastNotifiedAt": 0,
-      "status": "no parking"
-    }
-  ]
-}
 

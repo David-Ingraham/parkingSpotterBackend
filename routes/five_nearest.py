@@ -12,6 +12,19 @@ import inspect
 bp = Blueprint('five_nearest', __name__)
 BASE_URL = os.getenv("BACKEND_URL")
 
+# NYC boundary coordinates
+NYC_BOUNDS = {
+    "lat_min": 40.4774,
+    "lat_max": 40.9176,
+    "lng_min": -74.2591,
+    "lng_max": -73.7004
+}
+
+def is_within_nyc(lat: float, lng: float) -> bool:
+    """Check if coordinates are within NYC boundaries"""
+    return (NYC_BOUNDS["lat_min"] <= lat <= NYC_BOUNDS["lat_max"] and
+            NYC_BOUNDS["lng_min"] <= lng <= NYC_BOUNDS["lng_max"])
+
 def log_memory(label=""):
     proc = psutil.Process(os.getpid())
     mem = proc.memory_info().rss / 1024 / 1024  # in MB
@@ -48,7 +61,20 @@ def fiveNearest():
     log_memory("start /fiveNearest")
     start = time.time()
     data = request.get_json()
-    lat, lng = data["lat"], data["lng"]
+    
+    # Validate input data
+    if not data or "lat" not in data or "lng" not in data:
+        return jsonify(error="Missing latitude or longitude"), 400
+        
+    try:
+        lat = float(data["lat"])
+        lng = float(data["lng"])
+    except (ValueError, TypeError):
+        return jsonify(error="Invalid latitude or longitude format"), 400
+        
+    # Check if coordinates are within NYC
+    if not is_within_nyc(lat, lng):
+        return jsonify(error="Location must be within NYC boundaries"), 400
     
     # Create a unique directory for this request
     request_id = str(uuid.uuid4())
