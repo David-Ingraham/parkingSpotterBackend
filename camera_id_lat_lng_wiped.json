@@ -41,8 +41,9 @@
     },
     "1_Ave_57_st": {
         "camera_id": "79f45918-c13e-4357-9ccb-9e3e7ea5b6af",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7583141,
+        "longitude": -73.9629308,
+        "formatted_address": "1 Avenue & 57 st, Manhattan, New York, NY"
     },
     "1_Ave_62_St": {
         "camera_id": "aa85b894-336d-42bb-9801-0359e452f845",
@@ -161,8 +162,9 @@
     },
     "3_Ave_E_86_St": {
         "camera_id": "10c5f42d-6b32-4533-9c35-5715af4e4c76",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7780737,
+        "longitude": -73.9521896,
+        "formatted_address": "3 Avenue & East 86 St, Manhattan, New York, NY"
     },
     "3_Ave_E_88_St": {
         "camera_id": "4bd443cf-374f-493b-a99e-5f7ef81bb62c",
@@ -191,13 +193,15 @@
     },
     "5_Ave_46_St": {
         "camera_id": "8933100a-8229-42fe-b4b2-265db410d7ae",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7560367,
+        "longitude": -73.9790325,
+        "formatted_address": "5 Avenue & 46 St, Manhattan, New York, NY"
     },
     "5_Ave_49_St": {
         "camera_id": "7a7016c5-a086-40fd-9298-90f17f8b6cea",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7579283,
+        "longitude": -73.9776586,
+        "formatted_address": "5 Avenue & 49 St, Manhattan, New York, NY"
     },
     "5_Ave_59_St": {
         "camera_id": "b5a78bda-3ca9-4ad4-bd03-4cee70baba2d",
@@ -211,13 +215,15 @@
     },
     "5_Ave_72_St": {
         "camera_id": "03d9fe0d-7c26-4929-a350-ab0a58a430c6",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7724683,
+        "longitude": -73.9670357,
+        "formatted_address": "5 Avenue & 72 St, Manhattan, New York, NY"
     },
     "5_Ave_84_St": {
         "camera_id": "f2a7f677-64db-4dd9-9810-82e4910c7799",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7802392,
+        "longitude": -73.9613707,
+        "formatted_address": "5 Avenue & 84 St, Manhattan, New York, NY"
     },
     "5_Ave_86_St": {
         "camera_id": "06ea08ec-5cd8-4bd6-9535-502acf651abc",
@@ -246,8 +252,9 @@
     },
     "7_Ave_NB_Bay_Ridge_Pkwy": {
         "camera_id": "7a830ac8-1cce-4a85-b3de-44d74900b9bc",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.6265749,
+        "longitude": -74.017885,
+        "formatted_address": "7 Avenue & NB Bay Ridge Pkwy, Manhattan, New York, NY"
     },
     "7_Ave_Union_St": {
         "camera_id": "2064d8ab-597a-45d8-a3c9-5ab95a4e69e6",
@@ -316,8 +323,9 @@
     },
     "Amsterdam_86_St": {
         "camera_id": "0b0cbcfb-7c14-4b94-8bac-be494472c396",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.813416,
+        "longitude": -73.956239,
+        "formatted_address": "Amsterdam 86 St, Manhattan, New York, NY"
     },
     "Amsterdam_Ave_125_St": {
         "camera_id": "566bce47-4390-4ff3-94ab-7a0ca2989163",
@@ -341,8 +349,9 @@
     },
     "Atlantic_Ave_Boerum_St": {
         "camera_id": "2dcc40fd-3e70-44ba-8c6c-398e9ee4a22d",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.6890714,
+        "longitude": -73.99047759999999,
+        "formatted_address": "Atlantic Avenue & Boerum St, Manhattan, New York, NY"
     },
     "Atlantic_Ave_Clinton_ST": {
         "camera_id": "418ae598-7cdd-48ff-8aea-97fc3d312407",
@@ -371,8 +380,9 @@
     },
     "Broadway_46_St-_Quad_North": {
         "camera_id": "f3d82b25-6b10-44c7-ae89-30df075a7ac8",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.75658,
+        "longitude": -73.914101,
+        "formatted_address": "Broadway 46 St- Quad North, Manhattan, New York, NY"
     },
     "Bruckner_Blvd_Lincoln_Ave": {
         "camera_id": "82b0f566-cab5-4366-bc3a-67f82cc4fec7",
@@ -396,8 +406,9 @@
     },
     "C2-BQE-29_WB_at_Morgan_Street": {
         "camera_id": "c18f480c-e7a9-494b-b435-26adb0d9f881",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7730352,
+        "longitude": -73.7367605,
+        "formatted_address": "C2-BQE-29 WB at Morgan Street, Manhattan, New York, NY"
     },
     "Cadman_Plz_West_Tillary_St": {
         "camera_id": "07c5a9ab-38b0-4176-a932-395cded5858e",
@@ -416,23 +427,27 @@
     },
     "Central_Park_West_100_St": {
         "camera_id": "7c9ef8dd-7587-4e39-b486-13ef4c7e5721",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7825547,
+        "longitude": -73.9655834,
+        "formatted_address": "Central Park West 100 St, Manhattan, New York, NY"
     },
     "Central_Park_West_66_St": {
         "camera_id": "7e2400e3-cad2-407a-927b-d575a35048e3",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7825547,
+        "longitude": -73.9655834,
+        "formatted_address": "Central Park West 66 St, Manhattan, New York, NY"
     },
     "Central_Park_West_72_St": {
         "camera_id": "984ebbad-ca64-41d8-8008-63aaae316952",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7825547,
+        "longitude": -73.9655834,
+        "formatted_address": "Central Park West 72 St, Manhattan, New York, NY"
     },
     "Central_Park_West_77_St": {
         "camera_id": "90c74649-458d-4b5f-8f58-9ab77f03f4ad",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7825547,
+        "longitude": -73.9655834,
+        "formatted_address": "Central Park West 77 St, Manhattan, New York, NY"
     },
     "Central_Park_West_86_St": {
         "camera_id": "8a6bc417-4877-4ebe-8052-88c1b261baf1",
@@ -441,8 +456,9 @@
     },
     "Central_Park_West_96_St": {
         "camera_id": "19a2c89d-ea4d-437a-ae0c-2902ade217d6",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7825547,
+        "longitude": -73.9655834,
+        "formatted_address": "Central Park West 96 St, Manhattan, New York, NY"
     },
     "Church_Street_Vesey": {
         "camera_id": "5beee073-18a8-4349-af6b-75eff7a78371",
@@ -456,13 +472,15 @@
     },
     "Claremont_Boston_Rd_": {
         "camera_id": "1d5b7624-9334-4348-8119-4d0221988d24",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.8409,
+        "longitude": -73.9075506,
+        "formatted_address": "Claremont Boston Rd, Manhattan, New York, NY"
     },
     "Clearview_Northern_Blvd": {
         "camera_id": "e96fb86f-4bf6-4f97-b7f3-ec4f2e960788",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7627173,
+        "longitude": -73.8354153,
+        "formatted_address": "Clearview Northern Blvd, Manhattan, New York, NY"
     },
     "Columbia_St_Carroll_St_-_168_202": {
         "camera_id": "c073c2d9-919f-4ba3-ad13-d331d378e12b",
@@ -476,8 +494,9 @@
     },
     "CPW_110_St": {
         "camera_id": "c217a64e-95c3-4442-96d1-7a6c177615d7",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7811022,
+        "longitude": -73.9724322,
+        "formatted_address": "CPW 110 St, Manhattan, New York, NY"
     },
     "Crescent_st_39_Ave": {
         "camera_id": "97ace0b4-fcd2-4c3a-8c05-dbf73639ead3",
@@ -551,13 +570,15 @@
     },
     "GCP_166_St": {
         "camera_id": "858ef4e8-5058-4db2-96e2-70f71b65aa24",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.8387135,
+        "longitude": -73.9378338,
+        "formatted_address": "GCP 166 St, Manhattan, New York, NY"
     },
     "GCP_31_ST": {
         "camera_id": "1e88b34b-2058-402e-9a3d-aca1c57696bf",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7447262,
+        "longitude": -73.9816347,
+        "formatted_address": "GCP 31 ST, Manhattan, New York, NY"
     },
     "Gerard_Ave_E_161_St": {
         "camera_id": "ad051a78-9c50-43b3-bb71-83b091acd818",
@@ -566,13 +587,15 @@
     },
     "Gowanus_Expy_49_St": {
         "camera_id": "2b4ed602-312d-4f31-a531-153ac33b4d87",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.6454111,
+        "longitude": -74.0167979,
+        "formatted_address": "Gowanus Expy 49 St, Manhattan, New York, NY"
     },
     "Grand_Army_Plaza": {
         "camera_id": "1c51b3ec-3d29-4025-928d-4e182e7c0bd5",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7642731,
+        "longitude": -73.9730286,
+        "formatted_address": "Grand Army Plaza, Manhattan, New York, NY"
     },
     "Grand_Ave_Hamilton_Pl": {
         "camera_id": "b08600e6-7189-4104-a484-709dc81a3fa7",
@@ -581,8 +604,9 @@
     },
     "Grand_Ave_LIE": {
         "camera_id": "7c92c63b-2786-4600-9108-62cea2806345",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7174258,
+        "longitude": -73.9914536,
+        "formatted_address": "Grand Avenue & LIE, Manhattan, New York, NY"
     },
     "Grand_Concourse_161_St": {
         "camera_id": "a95f7916-24ee-4d7e-bc71-6f9f1e009f23",
@@ -616,8 +640,9 @@
     },
     "Grand_St_Bowery": {
         "camera_id": "c733e881-862d-4874-9d00-9bfdc3b27cbc",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7184848,
+        "longitude": -73.9948271,
+        "formatted_address": "Grand Street & Bowery, Manhattan, New York, NY"
     },
     "Grand_St_Broadway": {
         "camera_id": "63e79f0b-7dea-4c8e-864c-f3315f9cc62c",
@@ -636,13 +661,15 @@
     },
     "Hempstead_Ave_Springfield_Ave": {
         "camera_id": "5bcf06f4-dbf0-4c7b-b6f3-241aea4e92c6",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.6193583,
+        "longitude": -74.1352572,
+        "formatted_address": "Hempstead Avenue & Springfield Ave, Manhattan, New York, NY"
     },
     "Holland_Tunnel": {
         "camera_id": "25ad72fe-e74c-49af-b4c0-34c9eac14655",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7262999,
+        "longitude": -74.0127228,
+        "formatted_address": "Holland Tunnel, Manhattan, New York, NY"
     },
     "Houston_St_Bowery_St": {
         "camera_id": "b95471db-03ed-4fc3-9b91-561328029fd4",
@@ -761,8 +788,9 @@
     },
     "Manhattan_BBT_Entrance": {
         "camera_id": "7f89db99-3420-4f7b-9f2a-edfc9014e8c1",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.7163815,
+        "longitude": -73.9900542,
+        "formatted_address": "Manhattan BBT Entrance, Manhattan, New York, NY"
     },
     "McGuinness_Blvd_Green_St": {
         "camera_id": "195870e2-8714-45c6-86ba-8ae079ef738c",
@@ -896,8 +924,9 @@
     },
     "Queens_Blvd_E_B_43_St": {
         "camera_id": "60982889-171e-4208-ae1d-8f179f91231e",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.595737,
+        "longitude": -73.7747668,
+        "formatted_address": "Queens Blvd East B 43 St, Manhattan, New York, NY"
     },
     "Queens_Plaza_N_Northern_Blvd": {
         "camera_id": "a0ecf291-582c-4c42-933f-0b9ed4ce885c",
@@ -1015,9 +1044,9 @@
         "longitude": -73.994774
     },
     "7_Ave_23St": {
-      "camera_id": "fcfbaa3d-13e5-4687-9688-ae1eab37c723",
-      "latitude": 40.6576778,
-      "longitude": -73.9900804
+        "camera_id": "fcfbaa3d-13e5-4687-9688-ae1eab37c723",
+        "latitude": 40.6576778,
+        "longitude": -73.9900804
     },
     "7_AVE___ADAM_CLAYTON_POWELL_BLVD@_125_St": {
         "camera_id": "9bb33444-d2ec-47bd-952a-174f87013736",
@@ -1035,14 +1064,15 @@
         "longitude": -73.9898989
     },
     "Beach_Channel_Dr_@B_32_St": {
-      "camera_id": "4c47eda8-a4a1-4e40-baea-578e0a99e1d8",
-      "latitude": 40.5987496,
-      "longitude": -73.766002
+        "camera_id": "4c47eda8-a4a1-4e40-baea-578e0a99e1d8",
+        "latitude": 40.5987496,
+        "longitude": -73.766002
     },
     "Beach_Channel_Dr_@B_90_St": {
         "camera_id": "4b99e17b-d784-4ae3-a8f4-fb20e05895ee",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.5886071,
+        "longitude": -73.8171202,
+        "formatted_address": "Beach Channel Dr @B 90 St, Manhattan, New York, NY"
     },
     "Beach_Channel_Dr_@B_Mott_Ave": {
         "camera_id": "eca4e591-4ac8-471c-8e76-4710b52e6f9b",
@@ -1066,8 +1096,9 @@
     },
     "McDonald_Ave_10th_Ave___20th_St": {
         "camera_id": "f9608ba1-608f-4dad-a8aa-9a9c1978b363",
-        "latitude": null,
-        "longitude": null
+        "latitude": 40.73786399999999,
+        "longitude": -73.996726,
+        "formatted_address": "McDonald Avenue & 10th Avenue &   20th St, Manhattan, New York, NY"
     },
     "Queens_Plaza_North_2811_(Westside)": {
         "camera_id": "76ce9adc-f73d-46b7-9ca7-fe6d7521b603",
