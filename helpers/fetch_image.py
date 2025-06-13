@@ -3,7 +3,30 @@ import requests
 from PIL import Image
 from io import BytesIO
 import time
+import os
+from werkzeug.utils import secure_filename
+import io
 
+MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB
+ALLOWED_EXTENSIONS = {'jpg', 'jpeg', 'png'}
+
+def secure_file_path(base_dir, filename):
+    """Create a secure file path that prevents directory traversal"""
+    filename = secure_filename(filename)
+    return os.path.join(base_dir, filename)
+
+def validate_image(img_data):
+    """Validate image size and format"""
+    if len(img_data) > MAX_FILE_SIZE:
+        raise ValueError("Image too large")
+        
+    try:
+        img = Image.open(io.BytesIO(img_data))
+        if img.format.lower() not in ALLOWED_EXTENSIONS:
+            raise ValueError("Invalid image format")
+        return img
+    except Exception as e:
+        raise ValueError(f"Invalid image: {str(e)}")
 
 def fetch_and_save_image(camera_id, timestamp):
     """Fetch an image from the NYC traffic camera API"""
@@ -16,11 +39,14 @@ def fetch_and_save_image(camera_id, timestamp):
         
         if response.status_code == 200:
             try:
-                img = Image.open(BytesIO(response.content))
-                print(f"[DEBUG] Successfully opened image: {img.format}, Size: {img.size}")
+                img_data = response.content
+                img = validate_image(img_data)
                 return img
+            except ValueError as e:
+                print(f"Image validation failed: {e}")
+                return None
             except Exception as e:
-                print(f"[ERROR] Failed to process image for camera {camera_id}: {e}")
+                print(f"Image fetch failed: {e}")
                 return None
         else:
             print(f"[ERROR] Failed to fetch image for camera {camera_id}. Status Code: {response.status_code}")
